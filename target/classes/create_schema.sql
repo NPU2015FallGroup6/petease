@@ -28,7 +28,7 @@ CONSTRAINT pk_user_user_id PRIMARY KEY (user_id)
 
 CREATE TABLE post
 (
-post_id bigint NOT NULL,
+post_id bigint NOT NULL AUTO_INCREMENT,
 user_id varchar(40) NOT NULL,
 topic varchar(100) NOT NULL,
 content longtext NOT NULL,
@@ -44,11 +44,11 @@ CONSTRAINT pk_post_post_id PRIMARY KEY (post_id)
 #ALTER TABLE post
 #ADD CONSTRAINT fk_post_user_user_id FOREIGN KEY (user_id) REFERENCES user(user_id);
 
-#DROP TABLE post_status;
+##DROP TABLE post_status;
 
 CREATE TABLE post_status
 (
-status_id bigint NOT NULL,
+status_id bigint NOT NULL AUTO_INCREMENT,
 post_id bigint NOT NULL,
 rate tinyint NOT NULL,
 view_count int,
@@ -63,7 +63,7 @@ CONSTRAINT pk_post_status_status_id PRIMARY KEY (status_id)
 
 CREATE TABLE qa
 (
-qa_id int NOT NULL,
+qa_id int NOT NULL AUTO_INCREMENT,
 user_id varchar(40) NOT NULL,
 question_title varchar(100) NOT NULL,
 q_content text NOT NULL,
@@ -81,7 +81,7 @@ CONSTRAINT pk_qa_qa_id PRIMARY KEY (qa_id)
 
 CREATE TABLE rate
 (
-rate_id bigint NOT NULL,
+rate_id bigint NOT NULL AUTO_INCREMENT,
 user_id varchar(40) NOT NULL,
 post_id bigint NOT NULL,
 rate tinyint NOT NULL,
@@ -97,7 +97,7 @@ CONSTRAINT pk_rate_rate_id PRIMARY KEY (rate_id)
 
 CREATE TABLE comment
 (
-comment_id bigint NOT NULL,
+comment_id bigint NOT NULL AUTO_INCREMENT,
 user_id varchar(40) NOT NULL,
 post_id bigint NOT NULL,
 comment tinytext NOT NULL,
@@ -115,7 +115,7 @@ CONSTRAINT pk_comment_comment_id PRIMARY KEY (comment_id)
 
 CREATE TABLE news
 (
-news_id bigint NOT NULL,
+news_id bigint NOT NULL AUTO_INCREMENT,
 admin_id varchar(40) NOT NULL,
 news_title varchar(255) NOT NULL,
 content longtext NOT NULL,

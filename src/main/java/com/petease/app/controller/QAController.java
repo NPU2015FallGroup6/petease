@@ -30,7 +30,11 @@ public class QAController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		return "home";
+		return "index_member";
+	}
+	@RequestMapping(value = "/qa", method = RequestMethod.GET)
+	public String qa(Locale locale, Model model) {
+		return "question";
 	}
 
 	@RequestMapping(value="/qa",method=RequestMethod.POST)

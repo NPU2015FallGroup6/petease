@@ -43,7 +43,7 @@ and open the template in the editor.
             </div>
         </div>
         <div class="container" id="content" style="height:100%">
-            <form:form action="/qa" method="POST" commandName="qa">
+            <form:form action="./qa" method="POST" commandName="qa">
             <div class="col-sm-12" style="height: 100%; padding: 20px">
             <div class="row block">
                 <div style="font-size: 30px;color: brown">Question:</div>
