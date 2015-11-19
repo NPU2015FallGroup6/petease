@@ -26,6 +26,7 @@ and open the template in the editor.
                 padding:10px 0;
             }
         </style>
+        <script src="${context}/resources/js/validator.js"></script>
     </head>
     <body>
         <div class="container" id="header">
@@ -49,12 +50,13 @@ and open the template in the editor.
             <div class="row block">
                 <form:input type="hidden" path="asker"/>
                 <div style="font-size: 30px;color: brown">Question Title:</div>
-                <form:input type="text" class="blank" style="width:100%;" path="topic"/>
+                <form:input id="Question Title"  type="text" class="blank" style="width:100%;" path="topic"/>
                 <div style="font-size: 30px;color: brown">Question:</div>
-                <form:textarea class="blank" style="width:100%; height:100px;" path="question"/>
+                <form:textarea id="Question" class="blank" style="width:100%; height:100px;" path="question"/>
             </div>
+            <div id="errPlacehold" style="color:red;"></div>
             <div class="row block">
-                <div class="col-sm-2 block"><button style="width: 100%; height:40px; color: #245269;" onclick="document.getElementById('questionForm').submit()">Submit</button></div>
+                <div class="col-sm-2 block"><button style="width: 100%; height:40px; color: #245269;" onclick="return questionCommitValidation()">Submit</button></div>
                 <div class="col-sm-2 block"><button style="width: 100%; height:40px; color: #245269;" onclick="window.location.href='index.html'">Cancel</button></div>
                 <div class="col-sm-8 block"></div>
             </div>
