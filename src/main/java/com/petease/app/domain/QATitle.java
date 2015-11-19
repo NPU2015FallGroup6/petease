@@ -10,9 +10,9 @@ public class QATitle {
 	//constructor
 	public QATitle(){
 		this.qaId = 0;
-		asker = new User();
-		topic = "";
-		admin = new User();
+		this.asker = new User();
+		this.topic = "";
+		this.admin = new User();
 	}
 	
 	//setter

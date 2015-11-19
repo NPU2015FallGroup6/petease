@@ -30,24 +30,28 @@ public class QAController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		return "index_member";
+		return "index";
 	}
-	@RequestMapping(value = "/qa", method = RequestMethod.GET)
-	public String qa(Locale locale, Model model) {
-		return "question";
+	@RequestMapping(value = "/qa", method=RequestMethod.GET)
+	public ModelAndView getEmptyQa()
+	{
+		ModelAndView modelView;
+		QA qa;
+		
+		qa = new QA();
+		
+		modelView = new ModelAndView("question");
+		modelView.addObject("qa", qa);
+		return modelView;
 	}
 
-	@RequestMapping(value="/qa",method=RequestMethod.POST)
+	@RequestMapping(value="/qa", method=RequestMethod.POST)
 	public ModelAndView addQa(@ModelAttribute("qa") @Valid QA qa, BindingResult result, HttpSession session)
 	{
 		ModelAndView modelView;
-		if(result.hasErrors())
-		{
-			modelView = new ModelAndView("qaDataForm");
-			return modelView;
-		}
+		System.out.println(result.toString());
 		qaServ.writeQuestion(qa);
- 		modelView = new ModelAndView("redirect:index");
+ 		modelView = new ModelAndView("redirect:/");
  		session.setAttribute("qa", qa);
  		return modelView;
 	}

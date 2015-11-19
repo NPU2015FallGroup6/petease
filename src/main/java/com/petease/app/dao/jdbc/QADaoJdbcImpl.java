@@ -39,11 +39,11 @@ public class QADaoJdbcImpl implements QADao{
 	{
 		MapSqlParameterSource param=new MapSqlParameterSource();
 		
-		param.addValue("user_id", qa.getAsker().getUserId());
+		//param.addValue("user_id", qa.getAsker().getUserId());
+		//dummy userID
+		param.addValue("user_id", "tester001");
 		param.addValue("question_title", qa.getTopic());
-		param.addValue("server_id", qa.getAdmin().getUserId());
 		param.addValue("q_content", qa.getQuestion());
-		param.addValue("a_content", qa.getAnswer());
 		
 		Number newId=jdbcInsert.executeAndReturnKey(param);
 		qa.setQaId(newId.longValue());
