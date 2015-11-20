@@ -32,7 +32,9 @@ public class QARowMapper implements RowMapper<QA>{
 		asker.setBirthday(Formatter.date2String(resultSet.getDate("u_birthday")));
 		asker.setFirstName(resultSet.getString("u_first_name"));
 		asker.setLastName(resultSet.getString("u_last_name"));
-		asker.setLocation(resultSet.getString("u_location"));
+		asker.setAddress(resultSet.getString("u_address"));
+		asker.setCity(resultSet.getString("u_city"));
+		asker.setState(resultSet.getString("u_state"));
 		asker.setPreferPets(resultSet.getString("u_prefer_pets"));
 		asker.setFeedingPets(resultSet.getString("u_feeding_pets"));
 		asker.setPetName(resultSet.getString("u_pet_name"));
@@ -48,7 +50,9 @@ public class QARowMapper implements RowMapper<QA>{
 		admin.setBirthday(Formatter.date2String(resultSet.getDate("a_birthday")));
 		admin.setFirstName(resultSet.getString("a_first_name"));
 		admin.setLastName(resultSet.getString("a_last_name"));
-		admin.setLocation(resultSet.getString("a_location"));
+		admin.setAddress(resultSet.getString("a_address"));
+		admin.setCity(resultSet.getString("a_city"));
+		admin.setState(resultSet.getString("a_state"));
 		admin.setPreferPets(resultSet.getString("a_prefer_pets"));
 		admin.setFeedingPets(resultSet.getString("a_feeding_pets"));
 		admin.setPetName(resultSet.getString("a_pet_name"));

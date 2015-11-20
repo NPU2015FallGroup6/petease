@@ -8,8 +8,13 @@ public class User {
 	private String firstName;
 	private String lastName;
     private String gender;
+    private String birthdayYear;
+    private String birthdayMonth;
+    private String birthdayDay;
     private String birthday;
-    private String location;
+    private String address;
+    private String city;
+    private String state;
     private String preferPets;
     private String feedingPets;
     private String petName;
@@ -23,8 +28,13 @@ public class User {
 		this.firstName = "";
 		this.lastName = "";
 		this.gender = "";
+		this.birthdayYear = "";
+		this.birthdayMonth = "";
+		this.birthdayDay = "";
 		this.birthday = "";
-		this.location = "";
+		this.address = "";
+		this.city = "";
+		this.state = "";
 		this.preferPets = "";
 		this.feedingPets = "";
 		this.petName = "";
@@ -68,17 +78,47 @@ public class User {
 	public String getGender() {
 		return this.gender;
 	}
+    public void setBirthdayYear(String birthdayYear) {
+		this.birthdayYear = birthdayYear;
+	}
+	public String getBirthdayYear() {
+		return this.birthdayYear;
+	}
+    public void setBirthdayMonth(String birthdayMonth) {
+		this.birthdayMonth = birthdayMonth;
+	}
+	public String getBirthdayMonth() {
+		return this.birthdayMonth;
+	}
+    public void setBirthdayDay(String birthdayDay) {
+		this.birthdayDay = birthdayDay;
+	}
+	public String getBirthdayDay() {
+		return this.birthdayDay;
+	}
     public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 	public String getBirthday() {
 		return this.birthday;
 	}
-    public void setLocation(String location) {
-		this.location = location;
+    public void setAddress(String address) {
+		this.address = address;
 	}
-	public String getLocation() {
-		return this.location;
+	public String getAddress() {
+		return this.address;
+	}
+    public void setCity(String city) {
+		this.city = city;
+	}
+	public String getCity() {
+		return this.city;
+	}
+    public void setState(String state) {
+		this.state = state;
+	}
+	public String getState() {
+		return this.state;
 	}
     public void setPreferPets(String preferPets) {
 		this.preferPets = preferPets;
@@ -114,8 +154,13 @@ public class User {
                ", firstName = " + this.firstName +
                ", lastName = " + this.lastName +
                ", gender = " + this.gender +
+               ", birthdayYear = " + this.birthdayYear +
+               ", birthdayMonth = " + this.birthdayMonth +
+               ", birthdayDay = " + this.birthdayDay +
                ", birthday = " + this.birthday +
-               ", location = " + this.location +
+               ", address = " + this.address +
+               ", city = " + this.city +
+               ", state = " + this.state +
                ", preferPets = " + this.preferPets +
                ", feedingPets = " + this.feedingPets +
                ", petName = " + this.petName +
@@ -135,8 +180,13 @@ public class User {
                (this.firstName.equals(userObj.firstName)) &&
                (this.lastName.equals(userObj.lastName)) &&
                (this.gender.equals(userObj.gender)) &&
+               (this.birthdayYear.equals(userObj.birthdayYear)) &&
+               (this.birthdayMonth.equals(userObj.birthdayMonth)) &&
+               (this.birthdayDay.equals(userObj.birthdayDay)) &&
                (this.birthday.equals(userObj.birthday)) &&
-               (this.location.equals(userObj.location)) &&
+               (this.address.equals(userObj.address)) &&
+               (this.city.equals(userObj.city)) &&
+               (this.state.equals(userObj.state)) &&
                (this.preferPets.equals(userObj.preferPets)) &&
                (this.feedingPets.equals(userObj.feedingPets)) &&
                (this.petName.equals(userObj.petName)) &&
@@ -153,8 +203,13 @@ public class User {
         userObj.firstName = new String(this.firstName);
         userObj.lastName = new String(this.lastName);
         userObj.gender =new String(this.gender);
+        userObj.birthdayYear = new String(this.birthdayYear);
+        userObj.birthdayMonth = new String(this.birthdayMonth);
+        userObj.birthdayDay = new String(this.birthdayDay);
         userObj.birthday = new String(this.birthday);
-        userObj.location = new String(this.location);
+        userObj.address = new String(this.address);
+        userObj.city = new String(this.city);
+        userObj.state = new String(this.state);
         userObj.preferPets = new String(this.preferPets);
         userObj.feedingPets = new String(this.feedingPets);
         userObj.petName = new String(this.petName);
