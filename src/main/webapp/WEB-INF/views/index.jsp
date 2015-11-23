@@ -23,7 +23,12 @@ and open the template in the editor.
                     <img id="header_img" src="${context}/resources/img/pet_header.png" alt="Pet Header" style="height: 150px;">
                 </div>
                 <div class="col-sm-3" style="text-align: right;padding: 10px;">
-                    <span id="signOn" style="color: #0000ff;">Welcome, Steven</span>
+                    <span id="signUp" style="color: #0000ff;" onclick="window.location.href='./signup'">Sign Up</span>
+                    <span> | </span>
+                    <span id="signOn" style="color: #0000ff;">Sign On</span>
+                </div>
+                <div class="col-sm-3" style="text-align: right;padding: 10px;">
+                    <span id="welcomeInfo" style="color: #0000ff;">Welcome, Steven</span>
                     <span> | </span>
                     <span id="signOff" style="color: #0000ff;">Sign Off</span>
                 </div>

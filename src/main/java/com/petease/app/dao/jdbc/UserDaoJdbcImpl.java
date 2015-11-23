@@ -2,6 +2,7 @@ package com.petease.app.dao.jdbc;
 
 import java.sql.Types;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -47,11 +48,22 @@ public class UserDaoJdbcImpl implements UserDao{
 		param.addValue("address", user.getAddress());
 		param.addValue("city", user.getCity());
 		param.addValue("state", user.getState());
-		param.addValue("prefer_pets", user.getPreferPtes());
-		param.addValue("feeding_pets", user.getFeedingPets());
-		param.addValue("pey_name", user.getPetName());
+		param.addValue("prefer_pets", user.getPreferPets());
+		param.addValue("feeding_pets", Integer.parseInt(user.getFeedingPets()));
+		param.addValue("pet_name", user.getPetName());
 		param.addValue("career", user.getCareer());
+		param.addValue("created_date", new Date());
 		
 		int rowNo = jdbcInsert.execute(param);
+	}
+	
+	public User selectUserById(String userId) {
+		List<User> userList;
+		String querySql="SELECT * FROM user WHERE user_id=:userId";
+		HashMap<String,Object> param=new HashMap<String,Object>();
+		param.put("userId", userId);
+		userList=dbTemplate.query(querySql, param, userRowMapper);
+		if(userList.size()!=1)return null;
+		return userList.get(0);
 	}
 }

@@ -123,11 +123,11 @@ public class User {
     public void setPreferPets(String preferPets) {
 		this.preferPets = preferPets;
 	}
-	public String getPreferPtes() {
+	public String getPreferPets() {
 		return this.preferPets;
 	}
     public void setFeedingPets(String feedingPets) {
-		this.feedingPets = authType;
+		this.feedingPets = feedingPets;
 	}
 	public String getFeedingPets() {
 		return this.feedingPets;

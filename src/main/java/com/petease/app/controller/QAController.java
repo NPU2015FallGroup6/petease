@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.petease.app.domain.QA;
+import com.petease.app.domain.User;
 import com.petease.app.service.QAService;
 
 

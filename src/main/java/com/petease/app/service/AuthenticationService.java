@@ -8,5 +8,5 @@ import com.petease.app.domain.User;
 
 public interface AuthenticationService {
 	public void writeUserInfo(User user);
-	//public User readUserInfoById(String userId);
+	public User readUserInfoById(String userId);
 }

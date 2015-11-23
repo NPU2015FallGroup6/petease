@@ -30,11 +30,11 @@ public class UserRowMapper implements RowMapper<User>{
 		
 		//Get value from result set of query
 		
-		userId = resultSet.getNString("user_id");
+		userId = resultSet.getString("user_id");
 		password = resultSet.getString("password");
 		authType = resultSet.getString("auth_type");
 		gender = resultSet.getString("gender");
-		birthday = Formatter.date2String(resultSet.getDate("birthday"));
+		birthday = Formatter.date2String(resultSet.getDate("DOB"));
 		firstName = resultSet.getString("first_name");
 		lastName = resultSet.getString("last_name");
 		address = resultSet.getString("address");
