@@ -65,12 +65,12 @@ and open the template in the editor.
                         </div>
                         <div class="row block">
                             <div class="col-sm-3 item">Last Name:</div>
-                            <div class="col-sm-5"><form:input type="text" path ="firstName" id="lname" style="width:100%" class="blank"/></div>
+                            <div class="col-sm-5"><form:input type="text" path ="lastName" id="lname" style="width:100%" class="blank"/></div>
                             <div class="col-sm-4"></div>
                         </div>
                         <div class="row block">
                             <div class="col-sm-3 item">First Name:</div>
-                            <div class="col-sm-5"><form:input type="text" path ="lastName" id="fname" style="width:100%" class="blank"/></div>
+                            <div class="col-sm-5"><form:input type="text" path ="firstName" id="fname" style="width:100%" class="blank"/></div>
                             <div class="col-sm-4"></div>
                         </div>
                         <div class="row block">
