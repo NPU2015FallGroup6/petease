@@ -48,7 +48,7 @@ public class AuthenticationController {
 		return modelView;
 	}
 	
-	@RequestMapping(value = "/signupconfirm", method=RequestMethod.GET)
+	@RequestMapping(value = "/signupresponse", method=RequestMethod.GET)
 	public ModelAndView getUserById(String userId)
 	{
 		ModelAndView modelView;
@@ -61,7 +61,7 @@ public class AuthenticationController {
 			return modelView;
 			
 		}
-		modelView = new ModelAndView("signupinfo");
+		modelView = new ModelAndView("signupresponse");
 		modelView.addObject("user", user);
 		return modelView;
 	}
@@ -73,7 +73,7 @@ public class AuthenticationController {
 		ModelAndView modelView;
 		System.out.println(result.toString());
 		authenticationServ.writeUserInfo(user);
- 		modelView = new ModelAndView("redirect:/signupconfirm?userId="+user.getUserId());
+ 		modelView = new ModelAndView("redirect:/signupresponse");
  		session.setAttribute("user", user);
 
 	    // Recipient's email ID needs to be mentioned.

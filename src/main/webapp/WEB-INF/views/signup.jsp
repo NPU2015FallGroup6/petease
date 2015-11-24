@@ -81,7 +81,7 @@ and open the template in the editor.
                         <div class="row block">
                             <div class="col-sm-3 item">Date of Birth:</div>
                             <div class="col-sm-5">
-                                Year&nbsp;&nbsp;<form:input type="text" maxlength="4" path="birthdayYear" id ="year" style="width:60px;" class="blank" onchange="showDayPulldown()"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                                Year&nbsp;&nbsp;<form:input type="text" path="birthdayYear" id ="year" style="width:60px;" class="blank" onchange="showDayPulldown()"/>&nbsp;&nbsp;&nbsp;&nbsp;
                                 Month&nbsp;&nbsp;
                                 <form:select class="blank" path="birthdayMonth" id = "month" onchange="showDayPulldown()">
                                     <form:option value="1">Jan</form:option>
